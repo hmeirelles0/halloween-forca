@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da forca</title>
+    <link rel="stylesheet" href="./src/style/estilo_forca.css">
+    <script type="text/javascript" src="./src/js/jquery-3.7.1.js"></script>  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./src/imgs/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="div-header">
+            <h1>
+                <span id="titulo" class="rubik-wet-paint-regular">FORCA</span> <span class="shadow">&#x1F480;</span>
+            </h1>
+            <h2>
+                Você tem o que é preciso pra não <span class="rubik-wet-paint-regular">perder a cabeça?</span>
+            </h2>
+        </div>
+        <br>
+        <h3 id="letreiro">
+            &gt; Vamos jogar um jogo<p id="cursor">|</p>
+        </h3>
+    </header>
+    <main>
+        <div>
+            <fieldset class="fieldset">
+                    <div id="primeira-metade" class="primeira-metade">
+                        <div id="formulario">
+                            <p class="visibilidade">Tente adivinhar a letra: </p>
+                            <label for="letra" class="rubik-wet-paint-regular visibilidade">LETRA:</label>
+                            <input type="text" name="letra" id="letra" maxlength="1" class="txtCampos visibilidade" autofocus autocomplete="off">
+                            <input type="button" value="ENVIAR" id="btnLetra" class="btnEnvio visibilidade"
+                            onclick="enviarLetra()">
+                            <p class="visibilidade">Ou se achar que sabe a resposta, pode tentar a sorte...</p>
+                            <label for="palavra" class="rubik-wet-paint-regular visibilidade">RESPOSTA:</label>
+                            <input type="text" name="palavra" id="palavra" class="txtCampos visibilidade" autocomplete="off">
+                            <input type="button" value="ENVIAR" id="btnPalavra" class="btnEnvio visibilidade" onclick="enviarPalavra()">
+                        </div>
+                        <div id="historico">
+                            <p class="visibilidade"><strong>Letras já usadas:</strong></p>
+                            <p id="usadas" class="visibilidade">
+                            </p>
+                            <p class="rubik-wet-paint-regular visibilidade">PALAVRA:</p>
+                            <p id="resposta" class="visibilidade"></p>
+                        </div>
+                    </div>
+                    <div class="segunda-metade">
+                        <img src="./src/imgs/forca0.png" alt="Desenho de forca" id="imagemForca" class="imgForca">
+                    </div>
+            </fieldset>
+        </div>
+    </main>
+    <picture>
+        <source media="(max-width: 500px)" srcset="./src/imgs/Camping-Oil-Lamp-icon.png" class="lampiao">
+        <img src="./src/imgs/Camping-Oil-Lamp.png" alt="Desenho de uma lanterna à óleo" class="lampiao">
+    </picture>
+    <footer class="footer">
+        <input type="button" value="TENTE NOVAMENTE" onclick="reiniciar()">
+        <p><a href="https://github.com/hmeirelles0" target="_blank" rel="external" id="autor">Henrique Ferraz&copy;</a></p>
+    </footer>
+    <script src="./src/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,475 @@
+:root {
+    --corAnexos: rgb(150, 59, 193);
+    --corAnexos2: rgb(168, 67, 215);
+    --corAnexos3: darkblue;
+    --corCorpo: rgba(110, 14, 14, 0.974);
+}
+
+@font-face {
+    font-family: "Sixtyfour";
+    src: url("../fonts/SixtyfourConvergence/SixtyfourConvergence-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Posh";
+    src: url("../fonts/Posh/posh.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--corCorpo);
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../imgs/bg-texture.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 20px 20px rgba(0, 0, 0, 0.516), 0px 20px 20px 20px rgba(0, 0, 0, 0.516);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2%;
+    background-image: linear-gradient(var(--corCorpo), black);
+}
+
+header h1 {
+    color: white;
+    font-size: xx-large;
+    margin: auto;
+    border-radius: 8px 0px 8px 0px;
+    padding: 5px;
+    font-size: 300%;
+    text-shadow: 0px 0px 0px var(--corCorpo);
+}
+
+#titulo {
+    text-shadow: 0px 0px 0px var(--corCorpo);
+    animation: pulsar 4s ease 1s infinite;
+}
+
+h2 {
+    color: white;
+}
+
+h3 {
+    font-family: "Sixtyfour";
+    background-color: black;
+    padding: 5px 0px;
+    box-shadow: -1px 4px 20px 17px black;
+    display: flex;
+    justify-content: center;
+}
+
+.rubik-wet-paint-regular {
+    font-family: "Rubik Wet Paint", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: brown;
+}
+
+#cursor {
+    visibility: visible;
+    animation-name: piscar;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal; 
+    animation-timing-function: ease-in-out;
+}
+
+.shadow {
+    text-shadow: 3px 2px 0px rgb(224, 141, 224);
+}
+  
+main {
+    margin-bottom: 2%;
+}
+
+legend {
+    text-align: center;
+}
+
+#flexing {
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fieldset {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    border-style: none;
+}
+
+.primeira-metade {
+    display: flex;
+    background-image: url("../imgs/bg-letras.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px 0px 20px 20px rgba(0, 0, 0, 0.427),  13px -15px 12px 1px rgba(0, 0, 0, 0.427);
+    font-family: "Posh";
+    font-weight: bold;
+}
+
+#formulario {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+    box-shadow: inset 3px 0px 10px rgba(0, 0, 0, 0.636);
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+}
+
+.txtCampos {
+    background-color: rgba(255, 255, 255, 0);
+    border-style: dashed;
+    border-color: rgba(173, 64, 13, 0.537);
+    text-align: center;
+}
+
+.btnEnvio {
+    font-family: "Posh";
+    background-color: rgba(255, 228, 196, 0);
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    transition: 0.2s;
+}
+
+.btnEnvio:hover {
+    border-width: 0px 0px 2px 0px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#historico {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 15px;
+    box-shadow: inset 3px 0px 10px rgba(0, 0, 0, 0.636);
+    width: 50%;
+    text-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.segunda-metade {
+    box-shadow: -9px -8px 20px 5px rgba(0, 0, 0, 0.606);
+}
+
+.imgForca {
+    background-image: url("../imgs/bg-forca.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.424);
+    border: 20px groove goldenrod;
+    box-shadow: inset 0px 0px 20px black, 0px 0px 6px black;
+}
+
+input {
+    height: 30px;
+}
+
+.lampiao {
+    position: absolute;
+    z-index: 1;
+    right: 50%;
+    bottom: 1%;
+    box-shadow: inset 0px 0px 20px 8px rgba(255, 166, 0, 0.268), 0px 0px 6px rgb(255, 166, 0);
+    border-radius: 50%;
+    transform: rotateY(180deg);
+    animation: chama 1.5s 1s infinite alternate;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: larger;
+    color: white;
+    background-image: url("../imgs/bg-footer.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1% 0%;
+    margin: auto;
+    box-shadow: inset -1px 8px 20px 4px rgba(0, 0, 0, 0.723), 0px -20px 20px 20px rgba(0, 0, 0, 0.516);
+}
+
+.footer input {
+    background-color: black;
+    font-family: "Rubik Wet Paint", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: brown;
+    transition: 0.2s;
+    padding: 5px;
+    rotate: 1 1 1 13deg;
+    box-shadow: 20px -6px 20px 0px rgba(0, 0, 0, 0.919);
+}
+
+.footer input:hover {
+    transform: scale(1.1, 1.1);
+    text-decoration: underline;
+    text-shadow: 0px 0px 0px var(--corCorpo);
+    animation: pulsar 4s ease 1s infinite;
+}
+
+.footer p {
+    font-family: "Posh";
+    background-color: blanchedalmond;
+    /* background-image: url("./"); */
+    color: black;
+    padding: 5px;
+    rotate: 1 1 1 347deg;
+    box-shadow: -20px -6px 20px 0px rgba(0, 0, 0, 0.919), inset 3px 3px 20px 0px black;
+    transition: 0.2s;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer p:hover {
+    text-decoration: underline;
+    transform: scale(1.1, 1.1);
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (min-width: 300px) and (max-width: 375px) {
+    header {
+        margin-bottom: -2%;
+    }
+
+    h3 {
+        font-size: 0.8em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .div-header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-top: 2%;
+    }
+    
+    .fieldset {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        align-items: center;
+        align-content: center;
+    }
+
+    .primeira-metade {
+        translate: 0px -230px;
+        transform: scale(0.8, 0.65);
+    }
+    
+    .txtCampos {
+        border-color: rgba(173, 64, 13, 0.918);
+    }
+    
+    .segunda-metade {
+        translate: 0px -75px;
+        transform: scale(0.6, 0.5);
+        z-index: -1;
+    }
+
+    .imgForca {
+        box-shadow: black 0px 0px 20px inset, rgba(0, 0, 0, 0.537) 0px 7px 6px;
+    }
+    
+    .lampiao {
+        position: absolute;
+        z-index: 1;
+        right: 30%;
+    }
+
+    .footer {
+        box-shadow: inset -1px 8px 20px 4px rgba(0, 0, 0, 0.723), 1px 12px 20px 20px rgba(0, 0, 0, 0.516);
+    }
+
+    .footer input {
+        transform: scale(0.75);
+    }
+
+    .footer p {
+        transform: scale(0.75);
+    }
+}
+
+@media screen and (min-width: 390px) and (max-width: 500px) {
+    header {
+        margin-bottom: -2%;
+    }
+
+    h3 {
+        font-size: 0.8em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .div-header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-top: 2%;
+    }
+    
+    .fieldset {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        align-items: center;
+        align-content: center;
+    }
+
+    .primeira-metade {
+        translate: 0px -40px;
+        transform: scale(0.9);
+    }
+
+    .txtCampos {
+        border-color: rgba(173, 64, 13, 0.918);
+    }
+
+    .segunda-metade {
+        transform: scale(0.8);
+    }
+
+    .imgForca {
+        box-shadow: black 0px 0px 20px inset, rgba(0, 0, 0, 0.537) 0px 7px 6px;
+    }
+    
+    .lampiao {
+        position: absolute;
+        z-index: 1;
+        right: 30%;
+    }
+
+    .footer {
+        box-shadow: inset -1px 8px 20px 4px rgba(0, 0, 0, 0.723), 1px 12px 20px 20px rgba(0, 0, 0, 0.516);
+    }
+
+    .footer input {
+        transform: scale(0.75);
+    }
+
+    .footer p {
+        transform: scale(0.75);
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 900px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fieldset {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;    
+    }
+
+    .primeira-metade {
+        margin-bottom: 90px;
+    }
+
+    .lampiao {
+        translate: 110px 0px;
+    }
+}
+
+@media screen and (min-width: 1700px) and (max-width: 2000px) {
+    body {
+        box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.516), 0px 0px 0px 0px rgba(0, 0, 0, 0.516);
+    }
+}
+
+/* ANIMAÇÕES */
+
+@keyframes pulsar {
+    0% {
+        text-shadow: 0px 0px 0px rgb(158, 2, 2);
+    }
+
+    50% {
+        text-shadow: 0px 0px 20px rgb(158, 2, 2);
+    }
+    
+    100% {
+        text-shadow: 0px 0px 0px rgb(158, 2, 2);
+    }
+}
+
+@keyframes piscar {
+    0% {
+        visibility: visible;
+    }
+
+    50% {
+        visibility: visible;
+    }
+
+    51% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: hidden;
+    }
+}
+
+@keyframes chama {
+    0% {
+        box-shadow: inset 0px 0px 20px 8px rgba(255, 166, 0, 0.127), 0px 0px 0px rgba(255, 166, 0, 0.127);
+        border-radius: 50%;
+    }
+    
+    15% {
+        box-shadow: inset 0px 0px 20px 8px rgba(255, 166, 0, 0.268), 0px 0px 1px rgb(255, 166, 0);
+        border-radius: 50%;
+    }
+    
+    30% {
+        box-shadow: inset 0px 0px 20px 8px rgba(255, 166, 0, 0.127), 0px 0px 0px rgba(255, 166, 0, 0.127);
+        border-radius: 50%;
+    }
+    
+    50% {
+        box-shadow: inset 0px 0px 20px 8px rgba(255, 166, 0, 0.268), 0px 0px 1px rgb(255, 166, 0);
+        border-radius: 50%;
+    }
+    
+    100% {
+        box-shadow: inset 0px 0px 20px 8px rgba(255, 166, 0, 0.268), 0px 0px 1px rgb(255, 166, 0);
+        border-radius: 50%;
+    }
+}
