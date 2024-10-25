@@ -29,3 +29,35 @@
   ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
   ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 </div>
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+<h1>The Hangman Game</h1>
+
+## GOAL
+  This project was developed utilizing ```HTML5```, ```CSS3```, ```JavaScript``` and the ```JQuery``` library.
+  
+## HOW DOES IT WORK?
+
+  Through the use of the ```JQuery``` library, DOM manipulation became more dynamic and agile, reducing the size of lines of code. The logic consisted mainly of manipulating arrays that made it possible to:
+
+  <ul>
+    <li>Convert user-submitted lowercase letters to uppercase</li>
+    <li>Check whether the letter sent was among the letters in the array containing the response characters</li>
+    <li>Check whether the letter sent was already among the letters sent, to avoid repetitions</li>
+    <li>Prevent sending numbers, symbols and special characters in the letter field</li>
+  </ul>
+
+Responsiveness was obtained through ```CSS``` using the ```@media``` property for different screen sizes, mainly mobile.
+  
+## WHAT DOES IT DO?
+
+  The project consists of following the fundamentals of the game of hangman, where the player sends letters to compose a mysterious word of which he only knows the number of characters that make up it. There is also the option of making a final guess where, if the player knows the word, they can give it as an answer, instantly winning or losing the game. Whenever a correct letter guess is given, the letter will be highlighted along the length of the word, otherwise, each error accounts for a part of the "hanged man's" body. Upon completing the body, the player loses the game.
+  
+## TECHNOLOGIES
+
+  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+  ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
+  ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+  ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+  ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
