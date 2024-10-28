@@ -90,8 +90,6 @@ switch (numRand) {
 
 let segue = resposta.innerText.split(" ");
 
-console.log(sorteio);
-
 //A função abaixo valida a letra enviada pelo usuário, no caso de presença da letra, utilizando o método .split() e uma estrutura de repetição 'for', a resposta será fragmentada numa cadeia de caracteres que será salva em um array, pelo qual o laço de repetição irá 'ciclar', comparando cada caracter salvo no array com o valor armazenado na variável 'letra', que contém a letra enviada pelo usuário
 
 function enviarLetra () {
